@@ -23,35 +23,20 @@ public class meth {
         }
         
     }
-    public int findMax(){
-        int temp=0;
-        for(int i=0;i<numList.length;i++){
-            
-            if(temp<numList[i]){
-                temp=numList[i];
-            }
-        }
-        for(int i=0;i<numList.length;i++){
-            if(numList[i]==temp){
-                numList[i]=0;
-                
-            }
-        }
-        return temp;
-    }
+   
     
-    public void sort(){
-        int temp;
-      for(int k=0;k<numList.length-1;k++){// สลับตามจำนวนระหว่างคู่ครั้ง เพื่อให้สลับครบทุกคู่
-      for(int i=0;i<numList.length-1;i++){ //สลับที่ 2ตำแหน่ง
-          if(numList[i]<numList[i+1]){
-             temp=numList[i];
-             numList[i]=numList[i+1];
-             numList[i+1]=temp;
-          }
-          }
-      }
-    }
+//    public void sort(){
+//        int temp;
+//      for(int k=0;k<numList.length-1;k++){// สลับตามจำนวนระหว่างคู่ครั้ง เพื่อให้สลับครบทุกคู่
+//      for(int i=0;i<numList.length-1;i++){ //สลับที่ 2ตำแหน่ง
+//          if(numList[i]<numList[i+1]){
+//             temp=numList[i];
+//             numList[i]=numList[i+1];
+//             numList[i+1]=temp;
+//          }
+//          }
+//      }
+//    }
     
     public String showArr(){
         String temp="";
@@ -60,4 +45,39 @@ public class meth {
         }
         return temp;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    public int Findmax(){
+        int temp=0;
+        
+        for(int i=0;i<numList.length;i++){
+            if(temp<numList[i]){
+               temp=numList[i];
+            }
+        }
+        for(int k=0;k<numList.length;k++){
+            if(temp==numList[k]){
+                numList[k]=0;
+                return temp;
+            }
+        }
+        return temp;
+    }
+    public void sort(){
+        int[] temp=new int[numList.length];
+        for(int i=0;i<temp.length;i++){
+            temp[i]=Findmax();
+        }
+        numList=temp;
+        
+    }
+    
+    
+    
 }

@@ -19,16 +19,15 @@ public class JavaApplication57 {
      */
     public static void main(String[] args) {
 
-      meth m1=new meth();
-      m1.add(13);
-      m1.add(23);
-      m1.add(32);
-      m1.add(45);
-      m1.add(54);
-      System.out.println(m1.showArr());
-
-      m1.sort();
+    meth m1=new meth();
+    m1.add(1);
+    m1.add(2);
+    m1.add(3);
+    m1.add(5);
+    m1.add(5);
+    m1.sort();
         System.out.println(m1.showArr());
+        
 
     }
 
