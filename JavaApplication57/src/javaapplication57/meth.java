@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package javaapplication57;
-
+import java.util.Arrays;
 /**
  *
  * @author phunon
@@ -19,9 +19,12 @@ public class meth {
             count++;
         }
         else{
-            System.out.println("Full!");
+            extended();
         }
         
+    }
+    public void extended(){
+        numList=Arrays.copyOf(numList, numList.length+5);
     }
    
     

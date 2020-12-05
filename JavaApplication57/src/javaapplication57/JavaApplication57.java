@@ -20,12 +20,25 @@ public class JavaApplication57 {
     public static void main(String[] args) {
 
     meth m1=new meth();
-    m1.add(1);
-    m1.add(2);
-    m1.add(3);
-    m1.add(5);
-    m1.add(5);
-    m1.sort();
+    Scanner scan=new Scanner(System.in);
+    int cas;
+    boolean a=true;
+    while(a){
+        System.out.println("press 1,2");
+        cas=scan.nextInt();
+        switch(cas){
+            case 1:
+                System.out.println("Input num");
+                m1.add(scan.nextInt());
+                break;
+            case 2:
+                m1.sort();
+                a=false;
+                break;
+            default:
+                
+        }
+    }
         System.out.println(m1.showArr());
         
 
